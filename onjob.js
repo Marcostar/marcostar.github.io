@@ -6,7 +6,10 @@ var feed;
 function feedTheList()
 {
 
-
+    document.getElementById("on_campus").innerHTML = "On Campus Jobs: "+ feed.items.length;
+    //onCampus.innerHTML = " "+feed.items.length;
+    
+    
     console.log(feed.items.length);
     var list = document.getElementById("list");
 
@@ -24,7 +27,6 @@ function feedTheList()
 const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
 
 (async () => {
-  console.log("Messi is legend");
   feed = await parser.parseURL(CORS_PROXY + 'https://binghamton.joinhandshake.com/external_feeds/2631/public.rss?token=2XhufjIYzTcXOYoWyCgu9_BNP6XMi0G99d9Hx_-pLZLL4RcFK-K5lw');
   feedTheList();
 })();
