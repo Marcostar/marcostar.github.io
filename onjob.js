@@ -3,23 +3,26 @@ let parser = new Parser();
 
 var feed;
 
+// function openNewWindow(link)
+// {
+//     window.open(link, "_blank");
+// }
+
 function feedTheList()
 {
 
     document.getElementById("on_campus").innerHTML = "On Campus Jobs: "+ feed.items.length;
     //onCampus.innerHTML = " "+feed.items.length;
-    
-    
-    console.log(feed.items.length);
     var list = document.getElementById("list");
 
     feed.items.forEach(item => {
-      
-        console.log(" " + item.title);
         var li = document.createElement("li");
-        li.appendChild(document.createTextNode(item.title));
+        var a = document.createElement("a");
+        a.href = item.link;
+        a.title = item.title;
+        a.appendChild(document.createTextNode(item.title));
+        li.appendChild(a);
         list.appendChild(li);
-  
     });
 
 }
