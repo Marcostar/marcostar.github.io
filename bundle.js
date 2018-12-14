@@ -12,7 +12,7 @@ var feed;
 function feedTheList()
 {
 
-    document.getElementById("on_campus").innerHTML = "On Campus Jobs: "+ feed.items.length;
+    document.getElementsByClassName("totalJobs")[0].innerHTML = feed.items.length;
     //onCampus.innerHTML = " "+feed.items.length;
     var list = document.getElementById("list");
 

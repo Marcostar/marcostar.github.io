@@ -1,5 +1,75 @@
+html {
+    box-sizing: border-box;
+}
+  /* inherit border-box on all elements in the universe and before and after
+   */
+*, 
+*:before, 
+*:after {
+    box-sizing: inherit;
+}
+
+.wrapper {
+	width: 97%;
+	margin: 0 auto;
+	float: none;
+	/* background-color: #fff; */
+}
+  
+body {
+      font-family: Arial, Geneva, sans-serif;
+}
+
 a{
-    
     color: inherit;
     text-decoration: none;
+}
+
+.totalJobs{
+	color: #63BD60;
+	align-self: center;
+	align-content: center;
+}
+
+.myDIV {
+    height: 250px;
+    width: 250px;
+    overflow: auto;
+	background: #cfcfc4;
+	align-self: center;
+	text-align: center;
+}
+
+h3{
+    color: #006847;
+}
+
+/* grid system */
+.row {
+	display: flex;
+	flex-flow: row wrap;
+	flex: 0 1 auto;
+}
+
+[class*="col-"] {
+	flex: 0 0 92%;
+	margin: 0 4%;
+}
+
+.col-2{
+	align-self: center;
+    /* align-content: center; */
+	text-align: center;
+}
+
+@media only screen and (min-width: 480px)  {
+	.col-2 {
+		flex: 0 0 44%; 
+	}
+}
+/* Desktop screen Sizes */
+@media only screen and (min-width: 768px) {
+	.col-2{
+		flex: 0 0 44%;
+	}
 }
