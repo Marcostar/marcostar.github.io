@@ -28,16 +28,6 @@ function feedTheList()
 
 }
 
-const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
-
-(async () => {
-  feed = await parser.parseURL(CORS_PROXY + 'https://binghamton.joinhandshake.com/external_feeds/2631/public.rss?token=2XhufjIYzTcXOYoWyCgu9_BNP6XMi0G99d9Hx_-pLZLL4RcFK-K5lw');
-  feedTheList();
-})();
-
-
-
-
 function feedTheList1()
 {
 
@@ -57,10 +47,15 @@ function feedTheList1()
 
 }
 
-const CORS_PROXY1 = "https://cors-anywhere.herokuapp.com/";
+const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
 
 (async () => {
-  feed = await parser.parseURL(CORS_PROXY1 + 'https://app.joinhandshake.com/external_feeds/3228/public.rss?token=PJDm9yeM8ynxH8L6phyT8c0igpTts-seY8hX6HkHSAa9qN90pVpQEw');
+  feed = await parser.parseURL(CORS_PROXY + 'https://binghamton.joinhandshake.com/external_feeds/2631/public.rss?token=2XhufjIYzTcXOYoWyCgu9_BNP6XMi0G99d9Hx_-pLZLL4RcFK-K5lw');
+  feedTheList();
+})();
+
+(async () => {
+  feed = await parser.parseURL(CORS_PROXY+ 'https://app.joinhandshake.com/external_feeds/3228/public.rss?token=PJDm9yeM8ynxH8L6phyT8c0igpTts-seY8hX6HkHSAa9qN90pVpQEw');
   feedTheList1();
 })();
 //feedTheList();
