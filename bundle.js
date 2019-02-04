@@ -35,6 +35,34 @@ const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
   feedTheList();
 })();
 
+
+
+
+function feedTheList1()
+{
+
+    document.getElementsByClassName("totalJobs1")[0].innerHTML = feed.items.length;
+    //onCampus.innerHTML = " "+feed.items.length;
+    var list = document.getElementById("list1");
+
+    feed.items.forEach(item => {
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = item.link;
+        a.title = item.title;
+        a.appendChild(document.createTextNode(item.title));
+        li.appendChild(a);
+        list.appendChild(li);
+    });
+
+}
+
+const CORS_PROXY1 = "https://cors-anywhere.herokuapp.com/";
+
+(async () => {
+  feed = await parser.parseURL(CORS_PROXY1 + 'https://app.joinhandshake.com/external_feeds/3228/public.rss?token=PJDm9yeM8ynxH8L6phyT8c0igpTts-seY8hX6HkHSAa9qN90pVpQEw');
+  feedTheList1();
+})();
 //feedTheList();
 // setTimeout(function() {
 //   //your code to be executed after 1 second
