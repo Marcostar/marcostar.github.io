@@ -40,6 +40,11 @@ a{
 	text-align: center;
 }
 
+.listContent {
+	/* background-color: red; for visualization purposes */
+	display: inline-block;
+  }
+
 h3{
     color: #006847;
 }
@@ -49,27 +54,4 @@ h3{
 	display: flex;
 	flex-flow: row wrap;
 	flex: 0 1 auto;
-}
-
-[class*="col-"] {
-	flex: 0 0 92%;
-	margin: 0 4%;
-}
-
-.col-2{
-	align-self: center;
-    /* align-content: center; */
-	text-align: center;
-}
-
-@media only screen and (min-width: 480px)  {
-	.col-2 {
-		flex: 0 0 44%; 
-	}
-}
-/* Desktop screen Sizes */
-@media only screen and (min-width: 768px) {
-	.col-2{
-		flex: 0 0 44%;
-	}
 }

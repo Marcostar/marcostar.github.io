@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Jobs</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="onjob.css">
-    </head>
-    <body>
-        <div class="wrapper">
-            <div class="row">
-                <article class="col-2">
-                        <h4>There are currently</h4>
-                        <h1 class="totalJobs">--</h1>
-                        <h4>On-Campus Positions</h4>
-                        <h4>in hireBING</h4>
-                        <h3>On-Campus Positions</h3>
-                        <ol class="myDIV" id="list"></ol>
-                </article>
-                <article class="col-2">
-                        <h4>There are currently</h4>
-                        <h1 class="totalJobs">--</h1>
-                        <h4>Off-Campus Positions</h4>
-                        <h4>in hireBING</h4>
-                        <h3>On-Campus Positions</h3>
-                        <ol class="myDIV" id="list"></ol>
-                </article>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="onjob.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-6 text-center">
+            <h4>There are currently</h4>
+            <h1 class="totalJobs">--</h1>
+            <h4>On-Campus Positions</h4>
+            <h4>in hireBING</h4>
+            <h3>On-Campus Positions</h3>
+            <div class="listContent">
+                <ol class="myDIV" id="list"></ol>
             </div>
-        </div>        
-        <script src="bundle.js"></script>
-    </body>
-    
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-6 text-center">
+            <h4>There are currently</h4>
+            <h1 class="totalJobs">--</h1>
+            <h4>Off-Campus Positions</h4>
+            <h4>in hireBING</h4>
+            <h3>On-Campus Positions</h3>
+            <div class="listContent">
+                <ol class="myDIV" id="list"></ol>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+
 </html>
