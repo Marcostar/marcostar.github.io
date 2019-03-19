@@ -1,7 +1,7 @@
 let Parser = require('rss-parser');
 let parser = new Parser();
 
-var feed;
+var feed, feed1;
 
 // function openNewWindow(link)
 // {
@@ -30,11 +30,11 @@ function feedTheList()
 function feedTheList1()
 {
 
-    document.getElementsByClassName("totalJobs1")[0].innerHTML = feed.items.length;
+    document.getElementsByClassName("totalJobs1")[0].innerHTML = feed1.items.length;
     //onCampus.innerHTML = " "+feed.items.length;
     var list = document.getElementById("list1");
 
-    feed.items.forEach(item => {
+    feed1.items.forEach(item => {
         var li = document.createElement("li");
         var a = document.createElement("a");
         a.href = item.link;
@@ -51,12 +51,13 @@ const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
 (async () => {
   feed = await parser.parseURL(CORS_PROXY + 'https://binghamton.joinhandshake.com/external_feeds/2631/public.rss?token=2XhufjIYzTcXOYoWyCgu9_BNP6XMi0G99d9Hx_-pLZLL4RcFK-K5lw');
   feedTheList();
-})();
-
-(async () => {
-  feed = await parser.parseURL(CORS_PROXY+ 'https://app.joinhandshake.com/external_feeds/3228/public.rss?token=PJDm9yeM8ynxH8L6phyT8c0igpTts-seY8hX6HkHSAa9qN90pVpQEw');
+  feed1 = await parser.parseURL(CORS_PROXY+ 'https://app.joinhandshake.com/external_feeds/3228/public.rss?token=PJDm9yeM8ynxH8L6phyT8c0igpTts-seY8hX6HkHSAa9qN90pVpQEw');
   feedTheList1();
 })();
+
+// (async () => {
+  
+// })();
 //feedTheList();
 // setTimeout(function() {
 //   //your code to be executed after 1 second
